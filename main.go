@@ -84,7 +84,7 @@ func main() {
 				Handler: analyzePayload,
 			},
 			&client.SubReq{
-				TopicFilter: []byte("home/monitors/myhost"),
+				TopicFilter: []byte(fmt.Sprintf("home/monitors/%s", hostname)),
 				QoS:         mqtt.QoS0,
 				Handler:     analyzePayload,
 			},
